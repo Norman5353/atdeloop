@@ -8,3 +8,56 @@ html {
     font-family: Inter;
 }
     
+
+a {
+    text-decoration: none !important;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: 700 !important;
+  /* mobile-size : 28px */
+}
+h2   {
+  font-size: 22px;
+  font-weight: 500;
+  /* mobile-size : 24px */
+}
+h3   {
+    font-size: 20px;
+    font-weight: 500;
+    /* mobile-size : 24px */
+  }
+p {
+  font-size: 13px;
+  font-weight: 400;
+  /* mobile-size : 20px */
+}
+
+.CPrimary2 {
+  color: var(--primary-2);
+}
+
+.fs20 {
+    font-size: 20px;
+     /* mobile-size : 16px */
+}
+.fs18 {
+    font-size: 18px;
+     /* mobile-size : 16px */
+}
+.fs15 {
+    font-size: 215px;
+     /* mobile-size : 16px */
+}
+.fs13 {
+    font-size: 13px;
+     /* mobile-size : 16px */
+}
+.fw400{
+    font-weight: 400;
+}
+
+.fw500{
+    font-weight: 500;
+}

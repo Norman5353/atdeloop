@@ -1,27 +1,30 @@
 <template>
-  <button class="mainBtn" @click="navigateAndAnimate">Click Me</button>
-</template>
-
-<script>
-export default {
-  methods: {
-    navigateAndAnimate() {
-      // this.$router.push('/android-large-2');
-
-      // Animate the button
-      const btn = document.querySelector(".mainBtn");
-      btn.style.animation = "moveOutRight 300ms ease-in-out";
-
-      // Example: Triggering a delay before navigation after animation
-      setTimeout(() => {
-        // Replace this with your navigation logic, for example:
-        // this.$router.push('/android-large-2');
-        console.log("Navigating to Android Large - 2");
-      }, 300); // Match the animation duration
+    <button class="mainBtn" :class="{ secondary: isSecondary }" @click="navigateAndAnimate">
+     <slot></slot>
+    </button>
+  </template>
+  
+  <script>
+  export default {
+    props: {
+      isSecondary: {
+        type: Boolean,
+        default: false,
+      },
     },
-  },
-};
-</script>
+    methods: {
+      navigateAndAnimate() {
+        const btn = document.querySelector(".mainBtn");
+        btn.style.animation = "moveOutRight 300ms ease-in-out";
+  
+        setTimeout(() => {
+          // Replace this with your actual navigation logic
+          window.location.href = "/android-large-2";
+        }, 300); // Match the animation duration
+      },
+    },
+  };
+  </script>
 <!-- @import '../../assets/styles/colors.scss'; -->
 <style lang="scss">
 .mainBtn {
@@ -42,5 +45,12 @@ export default {
   font-weight: 700;
   line-height: normal;
   text-wrap: nowrap;
+
+  &.secondary {
+    border-radius: 30px;
+    background: var(--button, linear-gradient(4deg, #BDBCBC 2.92%, #EBE8E8 118.17%));
+    color: black;
+  }
+
 }
 </style>
