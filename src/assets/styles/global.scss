@@ -13,6 +13,7 @@ html {
 
 a {
     text-decoration: none !important;
+    cursor: pointer;
 }
 
 h1{
@@ -62,4 +63,8 @@ p {
 
 .fw500{
     font-weight: 500;
+}
+
+.section  {
+  padding: 10px 40px;
 }

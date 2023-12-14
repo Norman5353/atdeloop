@@ -1,105 +1,124 @@
 <template>
-    <div class="baseForm base-form" :class="{ 'half-width': halfWidth }">
-      <input
-        v-model="inputValue"
-        :placeholder="placeholder"
-        class="form-control"
-        :class="{ 'with-icon': hasIcon }"
-        :type="inputType"
-      />
+  <div :class="['base-form', { 'half-width': isHalf }]">
+    <input
+      :type="isPassword ? (showPassword ? 'text' : 'password') : type"
+      class="form-control"
+      v-model="value"
+      :placeholder="placeholderText"
+    />
+    <button v-if="isPassword" class="btn toggle-password" @click="toggleShow">
       <i
-        v-if="hasIcon && showPasswordToggle"
-        class="icon bi"
-        :class="eyeIconClass"
-        @click="togglePasswordVisibility"
-        role="button"
+        :class="{
+          'bi-eye-slash': showPassword,
+          'bi-eye': !showPassword,
+        }"
       ></i>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    props: {
-      hasIcon: {
-        type: Boolean,
-        default: false,
-      },
-      halfWidth: {
-        type: Boolean,
-        default: false,
-      },
-      placeholder: {
-        type: String,
-        default: '',
-      },
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    type: {
+      type: String,
+      default: "text",
     },
-    data() {
-      return {
-        inputValue: '',
-        showPassword: false,
-      };
+    password: {
+      type: Boolean,
+      default: false,
     },
-    computed: {
-      inputType() {
-        return this.showPassword ? 'text' : 'password';
-      },
-      eyeIconClass() {
-        return this.showPassword ? 'bi-eye-slash-fill' : 'bi-eye-fill';
-      },
-      showPasswordToggle() {
-        // Show the eye icon only if the input type is password
-        return this.inputType === 'password';
-      },
+    half: {
+      type: Boolean,
+      default: false,
     },
-    methods: {
-      togglePasswordVisibility() {
-        this.showPassword = !this.showPassword;
-      },
+    placeholder: String, 
+  },
+  data() {
+    return {
+      showPassword: false,
+      value: null,
+    };
+  },
+  computed: {
+    isPassword() {
+      return this.password;
     },
-  };
-  </script>
-  
-  <style scoped lang="scss">
-  /* Existing styles for base-form... */
-  
-  .icon {
-    /* Styles for the icon */
-    cursor: pointer;
-    /* Add more styles if needed */
-  }
-  </style>
-  
-  <style scoped lang="scss">
-  .baseForm {
-    border-radius: 30px;
-    background: #dedcdc;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2) inset;
-    color: #959595;
-    font-family: Inter;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  
-    &.base-form {
-      display: flex;
-      width: 100%; 
-      
-      &.half-width {
-        width: 50%; 
-      }
-      .form-control {
-        /* Styles for the input */
-        flex: 1;
-        /* Adjust padding, border, etc. */
-        &.with-icon {
-         
+    isHalf() {
+      return this.half;
+    },
+  },
+  methods: {
+    toggleShow() {
+      this.showPassword = !this.showPassword;
+      const inputField = document.getElementById("passwordInput");
+
+      if (!inputField) {
+        // If the input field doesn't have an ID, assign it here
+        const passwordInput = document.querySelector('input[type="password"]');
+        if (passwordInput) {
+          passwordInput.id = "passwordInput";
+          passwordInput.classList.add("inputWhileClicked");
         }
+      } else {
+        // Toggle the class if the input field already has the ID
+        inputField.classList.toggle("inputWhileClicked");
       }
-      .icon {
-       
-      }
-    }
-  }
-  </style>
-  
+    },
+  },
+};
+</script>
+
+<style scoped>
+.base-form {
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+.half-width {
+  width: 48.5%;
+}
+.form-control {
+  border-radius: 30px;
+  background: #dedcdc;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2) inset,
+     0px -3px 4px 0px rgba(0, 0, 0, 0.2) inset; 
+  color: #959595;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.toggle-password {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left: 0;
+  padding-left: 0;
+  margin-left: 0;
+ 
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2) inset,
+   0px 0px 0px 0px rgba(0, 0, 0, 0.2); 
+
+  color: #959595;
+  background: #dedcdc;
+}
+
+input[type="password"] {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+.inputWhileClicked {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+</style>
