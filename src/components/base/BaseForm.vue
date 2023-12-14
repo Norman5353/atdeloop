@@ -32,7 +32,11 @@ export default {
       type: Boolean,
       default: false,
     },
-    placeholder: String, 
+    email: {
+      type: Boolean,
+      default: false,
+    },
+    placeholder: String,
   },
   data() {
     return {
@@ -42,32 +46,26 @@ export default {
   },
   computed: {
     isPassword() {
-      return this.password;
+      return this.password; // Corrected from this.isPassword
     },
     isHalf() {
       return this.half;
     },
+    placeholderText() {
+      if (this.email) {
+        return 'Enter your email'; // Customize placeholder for email field
+      }
+      return this.placeholder || ''; // Use provided placeholder or default to an empty string
+    },
   },
   methods: {
     toggleShow() {
-      this.showPassword = !this.showPassword;
-      const inputField = document.getElementById("passwordInput");
-
-      if (!inputField) {
-        // If the input field doesn't have an ID, assign it here
-        const passwordInput = document.querySelector('input[type="password"]');
-        if (passwordInput) {
-          passwordInput.id = "passwordInput";
-          passwordInput.classList.add("inputWhileClicked");
-        }
-      } else {
-        // Toggle the class if the input field already has the ID
-        inputField.classList.toggle("inputWhileClicked");
-      }
+      this.showPassword = !this.showPassword; // Toggle showPassword value
     },
   },
 };
 </script>
+
 
 <style scoped>
 .base-form {

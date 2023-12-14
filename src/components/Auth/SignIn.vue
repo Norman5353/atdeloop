@@ -6,14 +6,13 @@
     <div
       class="d-flex justify-content-center flex-column align-items-center btnGroup w-100"
     >
-      <base-form email
-      :placeholder="'email'"
-      ></base-form>
-      <base-form password
-      :placeholder="'password'"></base-form>
+      <base-form email :placeholder="'Email Address'" />
+      <base-form password :placeholder="'password'"></base-form>
       <base-button>sign in</base-button>
 
-      <a class="forgotPassword" @click="showForgetPasswordDialog">Forget Password?</a>
+      <a class="forgotPassword" @click="showForgetPasswordDialog"
+        >Forget Password?</a
+      >
 
       <!-- Include the BaseDialog component and pass the isVisible prop -->
       <base-dialog
@@ -30,7 +29,7 @@
             <a> <img src="../../assets/images/Google Plus.svg" alt="" /></a>
           </div>
           <div class="signInImgWrapper">
-           <a><img src="../../assets/images/Facebook.svg" alt="" /></a> 
+            <a><img src="../../assets/images/Facebook.svg" alt="" /></a>
           </div>
         </div>
         <p class="haveAccount mt-4">
@@ -44,7 +43,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       isDialogVisible: false,
@@ -65,15 +63,11 @@ export default {
 <style scoped>
 /* ... (your existing styles) ... */
 </style>
-Make sure you're binding the isVisible prop to the isDialogVisible data property in your SignIn component where you're using the BaseDialog component. This should resolve the missing prop warning and allow the BaseDialog component to correctly receive the visibility information and toggle its display based on isDialogVisible.
-
-
-
-
-
-
-
-
+Make sure you're binding the isVisible prop to the isDialogVisible data property
+in your SignIn component where you're using the BaseDialog component. This
+should resolve the missing prop warning and allow the BaseDialog component to
+correctly receive the visibility information and toggle its display based on
+isDialogVisible.
 
 <style scoped>
 .signUpText {
@@ -151,5 +145,13 @@ p {
     max-width: 277px;
     max-height: 42px;
   }
+}
+input::placeholder {
+  color: #959595;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 </style>
