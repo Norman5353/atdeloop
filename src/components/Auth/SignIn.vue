@@ -6,14 +6,15 @@
       <div
         class="d-flex justify-content-center flex-column align-items-center gap-1 btnGroup w-100"
       >
-        <base-button isSecondary>Sign In</base-button>
-        <base-button isSecondary>Sign Up</base-button>
+     <base-form hasIcon halfWidth></base-form>
       </div>
     </div>
   </template>
   
   <style scoped>
+    
   .homePage {
+    border: 1px solid black;
     position: relative;
     height: 926px;
     img {

@@ -11,6 +11,7 @@ import TheHome2 from './pages/TheHome2.vue';
 
 import SignIn from './components/Auth/SignIn.vue';
 import SignUp from './components/Auth/SignUp.vue';
+import BaseForm from './components/base/BaseForm.vue';
 
 
 
@@ -22,6 +23,7 @@ app.component('the-home2', TheHome2);
 
 app.component('sign-in', SignIn);
 app.component('sign-up', SignUp);
+app.component('base-form', BaseForm);
 
 
 app.mount('#app');
