@@ -4,6 +4,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import VOtpInput from "vue3-otp-input";
 // import 'bootstrap-vue/dist/bootstrap-vue.css';
 // import { BootstrapVue } from 'bootstrap-vue';
 import BaseButton from './components/base/BaseButton.vue';
@@ -23,12 +24,12 @@ const app = createApp(App);
 app.component('base-button', BaseButton);
 app.component('the-home', TheHome);
 app.component('the-home2', TheHome2);
-
 app.component('sign-in', SignIn);
 app.component('sign-up', SignUp);
 app.component('the-verify', TheVerify);
 app.component('base-form', BaseForm);
 app.component('base-dialog', BaseDialog);
+app.component('v-otp-input', VOtpInput)
 
 
 app.mount('#app');
