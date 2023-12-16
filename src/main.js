@@ -21,6 +21,7 @@ import SignUp from './components/Auth/SignUp.vue';
 import TheVerify from './components/Auth/TheVerify.vue';
 import BaseForm from './components/base/BaseForm.vue';
 import BaseDialog from './components/base/BaseDialog.vue';
+import BaseNav from './components/base//BaseNav.vue';
 import TheProfile from './pages/profile/TheProfile.vue';
 
 
@@ -36,6 +37,7 @@ app.component('sign-up', SignUp);
 app.component('the-verify', TheVerify);
 app.component('the-profile', TheProfile);
 app.component('base-form', BaseForm);
+app.component('base-nav', BaseNav);
 app.component('base-header', BaseHeader);
 app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);

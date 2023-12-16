@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page position-relative">
     <base-header :pageTitle="pageTitle"></base-header>
     <div
       class="d-flex flex-column justify-content-center align-items-center gap-3 mt-3"
@@ -11,7 +11,8 @@
       <base-button>Edit Profile</base-button>
     </div>
 
-    <div class="menuContent"></div>
+    <!-- <div class="menuContent"></div> -->
+    <base-nav></base-nav>
   </div>
 </template>
 
