@@ -1,5 +1,6 @@
 html {
   max-width: 414px;
+  min-height: 799px;
   max-height: 926px;
   margin: 0 auto;
   background: #f2f2f2;
@@ -87,6 +88,8 @@ input::placeholder {
   font-weight: 400;
   line-height: normal;
 }
+
+
 
 // .custom-checkbox input[type="checkbox"] {
 //   appearance: none;

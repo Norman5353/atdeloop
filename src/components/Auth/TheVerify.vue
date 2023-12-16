@@ -7,7 +7,7 @@
       <h6 class="text-nowrap test-center mb-3">Enter the code sent to</h6>
       <p class="text-nowrap test-center fGreen3">email@gmail.com</p>
 
-      <div class="OTPBox ">
+      <div class="OTPBox">
         <div style="display: flex; flex-direction: row" class="m-4">
           <v-otp-input
             ref="otpInput"
@@ -24,7 +24,9 @@
           />
         </div>
 
-        <div class="resendCodeBox d-flex flex-column justify-content-center align-content-center align-items-center mb-4">
+        <div
+          class="resendCodeBox d-flex flex-column justify-content-center align-content-center align-items-center mb-4"
+        >
           <p class="m-0">I Didn’t Receive the Code?</p>
           <a class="resendCode" href="">Recent Code</a>
         </div>
@@ -32,35 +34,75 @@
         <!-- <a @click="clearInput()">resend code</a>
     <button @click="fillInput('2929')">Fill Input</button> -->
       </div>
-      <base-button class="">Verify</base-button>
+
+      <div>
+        <base-button @click.prevent="openModal">Verify</base-button>
+
+        <BaseModal ref="modalRef" :title="'Modal Title'" :content="'Modal Content'">
+          <!-- Extra content within the named slot -->
+          <template v-slot:extra-content>
+            <div class="d-flex justify-content-center flex-column gap-4">
+              <img src="../../assets/images/check-green.svg" alt="" />
+              <h1>Verified!</h1>
+              <p>
+                congratulations! You have successfully verified the account.
+              </p>
+            </div>
+          </template>
+        </BaseModal>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-// import { ref } from "vue";
-// import VOtpInput from "vue3-otp-input";
+import { ref } from 'vue';
 
-// const otpInput = ref(null);
-// const bindModal = ref("");
+export default {
+  setup() {
+    // Define reactive variables using ref()
+    const title = ref('Verification Required');
+    const content = ref('Please enter your verification code to proceed.');
+    const isOpen = ref(false);
+    const isFormOpen = ref(false);
+    const code = ref('');
 
-// const handleOnComplete = (value) => {
-//   console.log("OTP completed: ", value);
-// };
+    // Define methods using the Composition API
+    const openMyModal = () => {
+      isOpen.value = true;
+    };
 
-// const handleOnChange = (value) => {
-//   console.log("OTP changed: ", value);
-// };
+    const closeModal = () => {
+      isOpen.value = false;
+    };
 
-// const clearInput = () => {
-//   otpInput.value && otpInput.value.clearInput();
-// };
+    const onSubmit = () => {
+      isFormOpen.value = true;
+    };
 
-// const fillInput = (value) => {
-//   console.log(value);
-//   otpInput.value && otpInput.value.fillInput(value);
-// };
+    const openModal = () => {
+      // Accessing modalRef
+      console.log(ref);
+      // Perform actions related to modal here
+      // e.g., modalRef.openModal();
+    };
+
+    // Expose variables and functions to the template
+    return {
+      title,
+      content,
+      isOpen,
+      isFormOpen,
+      code,
+      openMyModal,
+      closeModal,
+      onSubmit,
+      openModal,
+    };
+  },
+};
 </script>
+
 
 <!-- OTP classes -->
 <style>

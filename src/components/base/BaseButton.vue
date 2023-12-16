@@ -1,5 +1,5 @@
 <template>
-    <button class="mainBtn" :class="{ secondary: isSecondary }" @click="navigateAndAnimate">
+    <button class="mainBtn" :class="{ secondary: isSecondary }">
      <slot></slot>
     </button>
   </template>
@@ -13,15 +13,15 @@
       },
     },
     methods: {
-      navigateAndAnimate() {
-        const btn = document.querySelector(".mainBtn");
-        btn.style.animation = "moveOutRight 300ms ease-in-out";
+      // navigateAndAnimate() {
+      //   const btn = document.querySelector(".mainBtn");
+      //   btn.style.animation = "moveOutRight 300ms ease-in-out";
   
-        setTimeout(() => {
-          // Replace this with your actual navigation logic
-          window.location.href = "/android-large-2";
-        }, 300); // Match the animation duration
-      },
+      //   setTimeout(() => {
+
+      //     window.location.href = "/android-large-2";
+      //   }, 300); 
+      // },
     },
   };
   </script>

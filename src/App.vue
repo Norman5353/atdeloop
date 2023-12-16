@@ -5,6 +5,7 @@
 <sign-in></sign-in>
 <sign-up></sign-up>
 <the-verify></the-verify>
+<the-profile></the-profile>
 
 
 </template>
