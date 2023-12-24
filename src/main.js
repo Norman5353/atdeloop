@@ -11,6 +11,7 @@ import 'vue-final-modal/style.css'
 // import 'bootstrap-vue/dist/bootstrap-vue.css';
 // import { BootstrapVue } from 'bootstrap-vue';
 import BaseButton from './components/base/BaseButton.vue';
+import FeatureButton from './components/FeatureButton.vue';
 import BaseModal from './components/base/BaseModal.vue';
 import BaseHeader from './components/base/BaseHeader.vue';
 import TheHome from './pages/TheHome.vue';
@@ -23,6 +24,8 @@ import BaseForm from './components/base/BaseForm.vue';
 import BaseDialog from './components/base/BaseDialog.vue';
 import BaseNav from './components/base//BaseNav.vue';
 import TheProfile from './pages/profile/TheProfile.vue';
+import EditProfile from './pages/profile/EditProfile.vue';
+import YourWallet from './pages/wallet/YourWallet.vue';
 
 
 
@@ -30,17 +33,20 @@ const app = createApp(App);
 const vfm = createVfm()
 
 app.component('base-button', BaseButton);
+app.component('feature-button', FeatureButton);
 app.component('the-home', TheHome);
 app.component('the-home2', TheHome2);
 app.component('sign-in', SignIn);
 app.component('sign-up', SignUp);
 app.component('the-verify', TheVerify);
 app.component('the-profile', TheProfile);
+app.component('edit-profile', EditProfile);
 app.component('base-form', BaseForm);
 app.component('base-nav', BaseNav);
 app.component('base-header', BaseHeader);
 app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);
+app.component('your-wallet', YourWallet);
 app.component('v-otp-input', VOtpInput);
 
 app.use(vfm);

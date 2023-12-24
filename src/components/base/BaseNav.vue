@@ -1,5 +1,5 @@
 <template>
-  <div class="baseNav bg-warning ">
+  <div class="baseNav bg-warning">
     <div id="navigation-wrapper">
       <div class="navigation">
         <div
@@ -14,7 +14,7 @@
         <div class="navigation-buttons">
           <ul class="mb-0">
             <li
-              class="d-inline-flex gap-3"
+              class="d-inline-flex gap-3 justify-content-center"
               v-for="(nav_item, index) in navigation"
               :key="index"
               :class="{ selected: nav_item.selected }"
@@ -23,9 +23,8 @@
               <span class="d-inline-block">
                 <img :src="nav_item.path" alt=""
               /></span>
-                            <!-- dynamic address above  -->
+              <!-- dynamic address above  -->
 
-            
               <!-- static address just for test -->
               <!-- <p>{{ nav_item.name }}</p> -->
             </li>
@@ -42,7 +41,7 @@ import { ref } from "vue";
 export default {
   setup() {
     const paths = {
-        _home: require("../../assets/images/nav/Home.svg"),
+      _home: require("../../assets/images/nav/Home.svg"),
       _chats: require("../../assets/images/nav/Chat.svg"),
       _add: require("../../assets/images/nav/Add.svg"),
       _diversity: require("../../assets/images/nav/Diversity.svg"),
@@ -73,10 +72,11 @@ export default {
 
 <style scoped>
 .baseNav {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
   a {
     margin: 20px;
     display: block;
@@ -95,7 +95,7 @@ export default {
 
   .navigation {
     /* overflow: auto; */
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); */
   }
 
   .navigation-content {
@@ -115,13 +115,15 @@ export default {
     /* height: 150px; */
   }
   .navigation-buttons {
-    /* overflow: auto; */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-
+    height: 54px;
   }
   .navigation-buttons ul {
-    background-color: red;
+    background-color: #a6a6a6;
     display: flex;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    height: 100%;
+
     li {
       float: right;
       display: inline-block;
@@ -133,10 +135,15 @@ export default {
       transition: all 0.2s;
       cursor: pointer;
       &.selected {
+        /* position: absolute; */
+        /* bottom: 50px; */
         color: #5a9cef;
         transform: scale(1.5) translateY(-10px);
-        border: 3px solid blue;
+        border: 3px solid #5d9600;
         border-radius: 100%;
+        background: #5d9600 50% / contain no-repeat;
+        fill: linear-gradient(180deg, #82d100 0%, #5d9600 100%);
+        width: 16%;
       }
       i {
         font-size: 30px;

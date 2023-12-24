@@ -1,8 +1,9 @@
 <template>
   <div class="page position-relative">
     <base-header :pageTitle="pageTitle"></base-header>
+    <!-- profileBox  -->
     <div
-      class="d-flex flex-column justify-content-center align-items-center gap-3 mt-3"
+      class="d-flex flex-column justify-content-center align-items-center gap-3 mt-3 mb-3"
     >
       <div class="imgWrapper">
         <img src="../../assets/images/profile.svg" alt="" />
@@ -11,19 +12,25 @@
       <base-button>Edit Profile</base-button>
     </div>
 
-    <!-- <div class="menuContent"></div> -->
+    <profile-menu></profile-menu>
+  
     <base-nav></base-nav>
   </div>
 </template>
 
 <script>
+import ProfileMenu from "../profile/ProfileMenu.vue";
 export default {
+  components: {
+    ProfileMenu,
+    
+  },
   data() {
     return {
-      pageTitle: "Profile", // Use a different name to avoid conflicts
+      pageTitle: "Profile", 
     };
   },
-  // Other component code
+
 };
 </script>
 

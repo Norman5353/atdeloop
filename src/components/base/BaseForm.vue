@@ -53,7 +53,7 @@ export default {
     },
     placeholderText() {
       if (this.email) {
-        return 'Enter your email'; // Customize placeholder for email field
+        return 'email'; // Customize placeholder for email field
       }
       return this.placeholder || ''; // Use provided placeholder or default to an empty string
     },
@@ -71,7 +71,7 @@ export default {
 .base-form {
   display: flex;
   width: 100%;
-  min-height: 40px;
+  min-height: 42px;
   margin-bottom: 10px;
 }
 .half-width {
@@ -80,8 +80,7 @@ export default {
 .form-control {
   border-radius: 30px;
   background: #dedcdc;
-  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.2) inset,
-     0px -3px 4px 0px rgba(0, 0, 0, 0.2) inset; 
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25) inset;
   color: #959595;
   font-family: Inter;
   font-size: 13px;

@@ -1,7 +1,7 @@
 html {
-  max-width: 414px;
+  max-width: 360px;
   min-height: 799px;
-  max-height: 926px;
+  // max-height: 926px;
   margin: 0 auto;
   background: #f2f2f2;
   border: 1px solid black;
@@ -61,11 +61,19 @@ p {
   /* mobile-size : 16px */
 }
 .fs15 {
-  font-size: 215px;
+  font-size: 15px;
   /* mobile-size : 16px */
 }
 .fs13 {
   font-size: 13px;
+  /* mobile-size : 16px */
+}
+.fs12{
+  font-size: 12px;
+  /* mobile-size : 16px */
+}
+.fs11 {
+  font-size: 11px;
   /* mobile-size : 16px */
 }
 .fw400 {
@@ -88,7 +96,10 @@ input::placeholder {
   font-weight: 400;
   line-height: normal;
 }
-
+.page {
+  height: 100vh;
+  background: #fafafa;
+}
 
 
 // .custom-checkbox input[type="checkbox"] {

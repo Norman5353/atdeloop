@@ -26,7 +26,7 @@
   };
   </script>
 <!-- @import '../../assets/styles/colors.scss'; -->
-<style lang="scss">
+<style lang="scss" scoped>
 .mainBtn {
   display: inline-flex;
   padding: 12px 95px;
