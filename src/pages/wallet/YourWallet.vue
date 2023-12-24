@@ -29,15 +29,25 @@
         </div>
         <div class="cardBox">
           <div class="mainCard p-4">
-            <h5>$ 3000</h5>
-            <span>Bank of Canada</span>
-            <h4>5292********1245</h4>
-            <img src="../../assets/images/Mastercard Logo.svg" alt="" />
+            <h5 class="balance"><span>$ </span>3000</h5>
+            <span class="bank ">Bank of Canada</span>
+            <h4 class="cardNumber">5292********1245</h4>
+            <img
+              class="cardLogo"
+              src="../../assets/images/Mastercard Logo.svg"
+              alt=""
+            />
           </div>
           <div class="sideCard1"></div>
           <div class="sideCard2"></div>
           <div class="sideCard3"></div>
           <div class="sideCard4"></div>
+        </div>
+
+        <div class="viewAllCards">
+          <img src="../../assets/images/Credit Card.svg" alt="" />
+
+          <a class="ms-2" href="">View all cards</a>
         </div>
       </div>
       <div class="recentTrans py-4 px-4">
@@ -101,7 +111,6 @@ export default {
           amount: "800",
           icon: "/path/to/up_arrow_icon.png",
         },
-       
       ],
     };
   },
@@ -156,6 +165,43 @@ export default {
         &:hover {
           transform: translateX(-10px);
         }
+
+        .balance {
+          width: 77px;
+          height: 17px;
+
+          color: #000;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        .bank {
+          width: 87px;
+          height: 9px;
+
+          color: #000;
+          font-family: Inter;
+          font-size: 8px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+
+        .cardNumber {
+          color: #000;
+          font-family: Inter;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .cardLogo {
+          width: 45px;
+          height: 45px;
+        }
       }
 
       .sideCard1 {
@@ -197,6 +243,32 @@ export default {
         z-index: 40;
       }
     }
+
+    .viewAllCards {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      right: 30px;
+      top: 300px;
+      a {
+        color: #5d9600;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline !important;
+        text-wrap: nowrap;
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 5px;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   .recentTrans {
@@ -225,7 +297,7 @@ export default {
     .transBox {
       display: flex;
       flex-direction: column;
-      gap:13px ;
+      gap: 13px;
     }
   }
 }
