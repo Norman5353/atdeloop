@@ -7,7 +7,8 @@
 <the-verify></the-verify>
 <the-profile></the-profile>
 <edit-profile></edit-profile> -->
-<your-wallet></your-wallet>
+<!-- <your-wallet></your-wallet> -->
+<view-cards></view-cards>
 
 
 </template>

@@ -99,18 +99,7 @@ export default {
   }
 
   .navigation-content {
-    /* &.first-color {
-      background-color: #efe6f7;
-    }
-    &.second-color {
-      background-color: #ffefe6;
-    }
-    &.third-color {
-      background-color: #efefff;
-    }
-    &.fourth-color {
-      background-color: #efffef;
-    } */
+  
     transition: all 0.3s;
     /* height: 150px; */
   }

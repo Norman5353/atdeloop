@@ -4,7 +4,9 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import VOtpInput from "vue3-otp-input";
+
 import { createVfm } from 'vue-final-modal';
 
 import 'vue-final-modal/style.css'
@@ -16,7 +18,7 @@ import BaseModal from './components/base/BaseModal.vue';
 import BaseHeader from './components/base/BaseHeader.vue';
 import TheHome from './pages/TheHome.vue';
 import TheHome2 from './pages/TheHome2.vue';
-
+import VuePaycard from "vue-paycard";
 import SignIn from './components/Auth/SignIn.vue';
 import SignUp from './components/Auth/SignUp.vue';
 import TheVerify from './components/Auth/TheVerify.vue';
@@ -26,11 +28,14 @@ import BaseNav from './components/base//BaseNav.vue';
 import TheProfile from './pages/profile/TheProfile.vue';
 import EditProfile from './pages/profile/EditProfile.vue';
 import YourWallet from './pages/wallet/YourWallet.vue';
+import ViewCards from './pages/wallet/ViewCards.vue';
 
 
 
 const app = createApp(App);
 const vfm = createVfm()
+
+app.component('v-otp-input', VOtpInput);
 
 app.component('base-button', BaseButton);
 app.component('feature-button', FeatureButton);
@@ -47,7 +52,8 @@ app.component('base-header', BaseHeader);
 app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);
 app.component('your-wallet', YourWallet);
-app.component('v-otp-input', VOtpInput);
+app.component('view-cards', ViewCards);
 
+app.use(VuePaycard);
 app.use(vfm);
 app.mount('#app');
