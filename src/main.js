@@ -18,7 +18,7 @@ import BaseModal from './components/base/BaseModal.vue';
 import BaseHeader from './components/base/BaseHeader.vue';
 import TheHome from './pages/TheHome.vue';
 import TheHome2 from './pages/TheHome2.vue';
-import VuePaycard from "vue-paycard";
+// import VuePaycard from "vue-paycard";
 import SignIn from './components/Auth/SignIn.vue';
 import SignUp from './components/Auth/SignUp.vue';
 import TheVerify from './components/Auth/TheVerify.vue';
@@ -29,6 +29,8 @@ import TheProfile from './pages/profile/TheProfile.vue';
 import EditProfile from './pages/profile/EditProfile.vue';
 import YourWallet from './pages/wallet/YourWallet.vue';
 import ViewCards from './pages/wallet/ViewCards.vue';
+import AddCart from './pages/wallet/AddCart.vue';
+import TheNotifications from './pages/TheNotifications.vue';
 
 
 
@@ -53,7 +55,11 @@ app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);
 app.component('your-wallet', YourWallet);
 app.component('view-cards', ViewCards);
+app.component('add-cart', AddCart);
+app.component('the-notifications', TheNotifications);
 
-app.use(VuePaycard);
+
+
+
 app.use(vfm);
 app.mount('#app');

@@ -8,7 +8,9 @@
 <the-profile></the-profile>
 <edit-profile></edit-profile> -->
 <!-- <your-wallet></your-wallet> -->
-<view-cards></view-cards>
+<!-- <view-cards></view-cards> -->
+<!-- <add-cart></add-cart> -->
+<the-notifications></the-notifications>
 
 
 </template>

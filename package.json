@@ -14,7 +14,6 @@
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-final-modal": "^4.5.3",
-    "vue-paycard": "^0.7.0",
     "vue-verification-code-input": "^1.0.0",
     "vue3-otp-input": "^0.4.1"
   },
