@@ -29,6 +29,11 @@ import TheProfile from './pages/profile/TheProfile.vue';
 import EditProfile from './pages/profile/EditProfile.vue';
 import YourWallet from './pages/wallet/YourWallet.vue';
 import ViewCards from './pages/wallet/ViewCards.vue';
+import MyRentals from "./pages/rental/MyRentals.vue";
+import MyRequests from "./pages/request/MyRequests.vue";
+import SingleRentalPage from "./pages/SingleRentalPage.vue";
+import TheAdvertisments from "./pages/TheAdvertisments.vue";
+import DatePicker from "vue3-datepicker";
 
 
 
@@ -53,6 +58,11 @@ app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);
 app.component('your-wallet', YourWallet);
 app.component('view-cards', ViewCards);
+app.component("my-rentals", MyRentals);
+app.component("my-requests", MyRequests);
+app.component("single-rental-page", SingleRentalPage);
+app.component("the-advertisments", TheAdvertisments);
+app.component("vue3-datepicker", DatePicker);
 
 app.use(VuePaycard);
 app.use(vfm);

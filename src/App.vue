@@ -8,7 +8,11 @@
 <the-profile></the-profile>
 <edit-profile></edit-profile> -->
 <!-- <your-wallet></your-wallet> -->
-<view-cards></view-cards>
+<!-- <my-rentals></my-rentals> -->
+<!-- <my-requests></my-requests> -->
+<!-- <single-rental-page></single-rental-page> -->
+<the-advertisments></the-advertisments>
+<!-- <view-cards></view-cards> -->
 
 
 </template>

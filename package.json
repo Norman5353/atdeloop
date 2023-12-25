@@ -16,6 +16,7 @@
     "vue-final-modal": "^4.5.3",
     "vue-paycard": "^0.7.0",
     "vue-verification-code-input": "^1.0.0",
+    "vue3-datepicker": "^0.4.0",
     "vue3-otp-input": "^0.4.1"
   },
   "devDependencies": {
