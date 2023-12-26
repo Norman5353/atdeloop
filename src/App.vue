@@ -11,7 +11,8 @@
 <!-- <my-rentals></my-rentals> -->
 <!-- <my-requests></my-requests> -->
 <!-- <single-rental-page></single-rental-page> -->
-<the-advertisments></the-advertisments>
+<!-- <the-advertisments></the-advertisments> -->
+<send-request></send-request>
 <!-- <view-cards></view-cards> -->
 
 

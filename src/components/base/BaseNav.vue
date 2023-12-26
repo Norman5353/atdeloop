@@ -20,13 +20,9 @@
               :class="{ selected: nav_item.selected }"
               @click="selectItem(index)"
             >
-              <span class="d-inline-block">
-                <img :src="nav_item.path" alt=""
-              /></span>
-              <!-- dynamic address above  -->
+                <img class="" :src="nav_item.path" alt="">
 
-              <!-- static address just for test -->
-              <!-- <p>{{ nav_item.name }}</p> -->
+              
             </li>
           </ul>
         </div>
@@ -94,8 +90,7 @@ export default {
   }
 
   .navigation {
-    /* overflow: auto; */
-    /* box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); */
+    transform: translateY(-100%);
   }
 
   .navigation-content {
@@ -127,8 +122,8 @@ export default {
         /* position: absolute; */
         /* bottom: 50px; */
         color: #5a9cef;
-        transform: scale(1.5) translateY(-10px);
-        border: 3px solid #5d9600;
+        transform: scale(1.5) translateY(-35%);
+        border: 6px solid white;
         border-radius: 100%;
         background: #5d9600 50% / contain no-repeat;
         fill: linear-gradient(180deg, #82d100 0%, #5d9600 100%);
