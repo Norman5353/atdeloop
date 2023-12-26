@@ -7,10 +7,15 @@
 <the-verify></the-verify>
 <the-profile></the-profile>
 <edit-profile></edit-profile> -->
-<!-- <your-wallet></your-wallet> -->
-<!-- <view-cards></view-cards> -->
-<!-- <add-cart></add-cart> -->
+<!-- <your-wallet></your-wallet>
+<view-cards></view-cards>
+<add-cart></add-cart>
 <the-notifications></the-notifications>
+<the-transactions></the-transactions> -->
+<!-- <send-request></send-request> -->
+<publish-waiting></publish-waiting>
+<publish-done></publish-done>
+<add-view></add-view>
 
 
 </template>

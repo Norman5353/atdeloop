@@ -1,11 +1,14 @@
 <template>
   <div class="page position-relative h-100">
     <base-header :pageTitle="pageTitle"></base-header>
-
-    <div class="settingBox w-50 px-4 py-4 justify-content-start">
-      <img src="../assets/images/tune.svg" alt="" />
-      <img src="../assets/images/delete.svg" alt="" />
+    <base-nav></base-nav>
+    <div class="h-100 d-flex justify-content-end">
+      <div class="settingBox w-50 px-4 py-4 d-flex justify-content-end gap-3">
+     <a href=""><img src="../assets/images/delete.svg" alt="" /></a>   
+       <a href=""><img src="../assets/images/tune.svg" alt="" /></a> 
+      </div>
     </div>
+
     <div class="mainContent">
       <div class="today">
         <h4>Today</h4>
@@ -22,8 +25,6 @@
       <single-notif></single-notif>
       <single-notif></single-notif>
       <single-notif></single-notif>
-
-      <base-nav></base-nav>
     </div>
   </div>
 </template>
@@ -47,19 +48,15 @@ export default {
 .titleBox {
 }
 .mainContent {
-  .today {
-
-    color: #9F9F9F;
-font-family: Inter;
-font-size: 11px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
-    padding: 11px 23px;
-    border-bottom: solid 1px #ccc;
-  }
+  .today,
   .lastDay {
+    color: #9f9f9f;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
     padding: 11px 23px;
     border-bottom: solid 1px #ccc;
   }

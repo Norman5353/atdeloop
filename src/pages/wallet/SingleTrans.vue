@@ -25,7 +25,7 @@
 
   let transactionIcon = '';
 
-  if (props.transactionType === 'deposit') {
+  if (props.transactionType === 'deposit ') {
     transactionIcon = '/path/to/up_arrow_icon.png';
   } else if (props.transactionType === 'withdraw') {
     transactionIcon = '/path/to/down_arrow_icon.png';
@@ -50,6 +50,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    min-width: 60px;
   }
   .date {
     color: #8d8d8d;
@@ -58,6 +59,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    /* min-width: 40px; */
   }
   .amount.deposit span {
     color: #5d9600;

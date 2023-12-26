@@ -115,7 +115,10 @@ input::placeholder {
   line-height: normal;
 }
 .page {
-  height: 100vh;
+  max-width: 360px;
+  min-height: 799px;
+  // max-height: 926px;
+  margin: 0 auto;
   background: #fafafa;
 }
 

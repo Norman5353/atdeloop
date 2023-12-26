@@ -31,6 +31,11 @@ import YourWallet from './pages/wallet/YourWallet.vue';
 import ViewCards from './pages/wallet/ViewCards.vue';
 import AddCart from './pages/wallet/AddCart.vue';
 import TheNotifications from './pages/TheNotifications.vue';
+import TheTransactions from './pages/wallet/TheTransactions.vue';
+import SendRequest from './pages/SendRequest.vue';
+import PublishWaiting from './pages/PublishWaiting.vue';
+import PublishDone from './pages/PublishDone.vue';
+import AddView from './pages/AddView.vue';
 
 
 
@@ -57,6 +62,11 @@ app.component('your-wallet', YourWallet);
 app.component('view-cards', ViewCards);
 app.component('add-cart', AddCart);
 app.component('the-notifications', TheNotifications);
+app.component('the-transactions', TheTransactions);
+app.component('send-request', SendRequest);
+app.component('publish-waiting', PublishWaiting);
+app.component('publish-done', PublishDone);
+app.component('add-view', AddView);
 
 
 

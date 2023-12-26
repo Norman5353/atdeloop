@@ -45,7 +45,6 @@ export default {
 .mainBtn {
   width: 70px;
   height: 63px;
-  
   border-radius: 10px;
   box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -54,6 +53,11 @@ export default {
   align-items: center;
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Moved the transition here */
+}
+
+.mainBtn::hover {
+  transform: translateY(5px); /* Applied directly to the mainBtn class */
 }
 
 .greyGradient {

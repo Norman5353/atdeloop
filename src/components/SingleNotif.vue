@@ -1,6 +1,6 @@
 <template>
   <div class="singleNotif">
-    <span class="text-danger">●</span>
+    <span class="text-danger dot">●</span>
     <img src="../assets/images/notif.svg" alt="" />
     <div class="content">
       <h6 class="p-0 m-0 ps-2">Lorem ipsum dolor sit amet consectetur.</h6>
@@ -25,10 +25,14 @@
     flex-shrink: 0;
   }
 
+  .dot {
+    font-size: 8px;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     // align-items: center;
     h6 {
       color: #6f6e6e;
