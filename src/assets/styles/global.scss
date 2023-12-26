@@ -123,6 +123,18 @@ input::placeholder {
 }
 
 
+.modal-content{
+  border-radius: 15px !important;
+background: #FFF !important; 
+}
+
+.modal-body,
+.modal-header,
+.modal-footer {
+  border: none !important;
+}
+
+
 // .custom-checkbox input[type="checkbox"] {
 //   appearance: none;
 //   -webkit-appearance: none;

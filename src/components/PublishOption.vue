@@ -16,10 +16,10 @@
   <script>
   export default {
     props: {
-      delete: Boolean,
-      edit: Boolean,
-      contactSupport: Boolean,
       preview: Boolean,
+      edit: Boolean,
+      delete: Boolean,
+      contactSupport: Boolean,
       adViewStats: Boolean
     },
     data() {

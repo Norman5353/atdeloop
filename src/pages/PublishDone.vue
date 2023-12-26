@@ -9,17 +9,39 @@
       </p>
     </div>
 
-    <div class="mainContent"></div>
+    <div class="mainContent px-4">
+      <div class="optionBox">
+        <ul class="list-unstyled">
+          <li>
+            <PublishOption preview />
+          </li>
+          <li>
+            <PublishOption adViewStats />
+          </li>
+          <li>
+            <PublishOption edit />
+          </li>
+          <li>
+            <PublishOption delete />
+          </li>
+          <li>
+            <PublishOption contactSupport
+            class="border-0" />
+          </li>
+        </ul>
+      </div>
+    </div>
+   
   </div>
 </template>
 
 <script>
-//   import SingleTrans from "./SingleTrans.vue";
+import PublishOption from "../components/PublishOption.vue";
 
 export default {
-  // components: {
-  //   SingleTrans,
-  // },
+    components: {
+    PublishOption,
+  },
   data() {
     return {
       pageTitle: "Published",

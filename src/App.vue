@@ -3,9 +3,9 @@
 <!-- <the-home></the-home>
 <the-home2></the-home2>
 <sign-in></sign-in>
-<sign-up></sign-up>
+<sign-up></sign-up> -->
 <the-verify></the-verify>
-<the-profile></the-profile>
+<!-- <the-profile></the-profile>
 <edit-profile></edit-profile> -->
 <!-- <your-wallet></your-wallet>
 <view-cards></view-cards>
@@ -14,8 +14,8 @@
 <the-transactions></the-transactions> -->
 <!-- <send-request></send-request> -->
 <publish-waiting></publish-waiting>
-<publish-done></publish-done>
-<add-view></add-view>
+<!-- <publish-done></publish-done>
+<add-view></add-view> -->
 
 
 </template>
