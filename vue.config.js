@@ -1,10 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
+
 module.exports = defineConfig({
-  transpileDependencies: true
-})
-
-
-module.exports = {
+  transpileDependencies: true,
   css: {
     loaderOptions: {
       sass: {
@@ -12,5 +9,12 @@ module.exports = {
       },
     },
   },
-};
-
+  chainWebpack: config => {
+    config.module
+      .rule('txt')
+      .test(/\.txt$/)
+      .use('file-loader')
+      .loader('file-loader')
+      .end();
+  },
+});
