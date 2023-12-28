@@ -12,7 +12,7 @@
 <add-cart></add-cart>
 <the-notifications></the-notifications>
 <the-transactions></the-transactions> -->
-<!-- <send-request></send-request> -->
+<!-- <request-category></request-category> -->
 <publish-waiting></publish-waiting>
 <!-- <publish-done></publish-done>
 <add-view></add-view> -->
