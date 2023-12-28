@@ -68,7 +68,7 @@ p {
   font-size: 13px;
   /* mobile-size : 16px */
 }
-.fs12{
+.fs12 {
   font-size: 12px;
   /* mobile-size : 16px */
 }
@@ -120,6 +120,10 @@ input::placeholder {
   // max-height: 926px;
   margin: 0 auto;
   background: #fafafa;
+  max-width: 360px;
+  min-height: 799px;
+  // max-height: 926px;
+  margin: 0 auto;
 }
 
 

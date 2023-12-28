@@ -5,6 +5,8 @@ import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/js/bootstrap.js";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import "vue3-carousel/dist/carousel.css";
+
 
 import VOtpInput from "vue3-otp-input";
 
@@ -30,6 +32,7 @@ import TheProfile from './pages/profile/TheProfile.vue';
 import EditProfile from './pages/profile/EditProfile.vue';
 import YourWallet from './pages/wallet/YourWallet.vue';
 import ViewCards from './pages/wallet/ViewCards.vue';
+
 import AddCart from './pages/wallet/AddCart.vue';
 import TheNotifications from './pages/TheNotifications.vue';
 import TheTransactions from './pages/wallet/TheTransactions.vue';
@@ -37,6 +40,15 @@ import RequestCategory from './pages/RequestCategory.vue';
 import PublishWaiting from './pages/PublishWaiting.vue';
 import PublishDone from './pages/PublishDone.vue';
 import AddView from './pages/AddView.vue';
+
+import MyRentals from "./pages/rental/MyRentals.vue";
+import MyRequests from "./pages/request/MyRequests.vue";
+import SingleRentalPage from "./pages/SingleRentalPage.vue";
+import SendRequest from "./pages/request/SendRequest.vue";
+import TheAdvertisements from "./pages/TheAdvertisements.vue";
+import UploadImage from "./pages/UploadImage.vue";
+import DatePicker from "vue3-datepicker";
+
 
 
 
@@ -61,6 +73,7 @@ app.component('base-dialog', BaseDialog);
 app.component('base-modal', BaseModal);
 app.component('your-wallet', YourWallet);
 app.component('view-cards', ViewCards);
+
 app.component('add-cart', AddCart);
 app.component('the-notifications', TheNotifications);
 app.component('the-transactions', TheTransactions);
@@ -69,7 +82,14 @@ app.component('publish-waiting', PublishWaiting);
 app.component('publish-done', PublishDone);
 app.component('add-view', AddView);
 
+app.component("my-rentals", MyRentals);
+app.component("my-requests", MyRequests);
+app.component("single-rental-page", SingleRentalPage);
+app.component("the-advertisements", TheAdvertisements);
+app.component("send-request", SendRequest);
+app.component("upload-image", UploadImage);
 
+app.component("vue3-datepicker", DatePicker);
 
 
 app.use(vfm);

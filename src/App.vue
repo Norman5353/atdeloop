@@ -8,10 +8,15 @@
 <!-- <the-profile></the-profile>
 <edit-profile></edit-profile> -->
 <!-- <your-wallet></your-wallet>
-<view-cards></view-cards>
+ <my-rentals></my-rentals> -->
+<!-- <my-requests></my-requests> -->
+<!-- <single-rental-page></single-rental-page> -->
+<!-- <the-advertisements></the-advertisements> -->
+<send-request></send-request>
+<!-- <view-cards></view-cards> -->
 <add-cart></add-cart>
 <the-notifications></the-notifications>
-<the-transactions></the-transactions> -->
+<the-transactions></the-transactions> 
 <!-- <request-category></request-category> -->
 <publish-waiting></publish-waiting>
 <!-- <publish-done></publish-done>
